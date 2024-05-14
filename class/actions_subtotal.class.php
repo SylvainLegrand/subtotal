@@ -2995,6 +2995,14 @@ class ActionsSubtotal extends \subtotal\RetroCompatCommonHookActions
 						}
                         if (TSubtotal::isTitle($line)&& !getDolGlobalString('SUBTOTAL_HIDE_OPTIONS_TITLE'))
                         {
+							// InfraS add begin
+							if (!empty(isModEnabled('infraspackplus')) && in_array($object->element, array('propal', 'commande', 'facture'))) {
+								echo '<div>';
+								echo '<input style="vertical-align:sub;"  type="checkbox" name="line-showTableHeaderBefore" id="subtotal-showTableHeaderBefore" value="10" '.((!empty($line->array_options['options_show_table_header_before']) && $line->array_options['options_show_table_header_before'] > 0) ? 'checked="checked"' : '') .' />&nbsp;';
+								echo '<label for="subtotal-showTotalHT">'.$langs->trans('ShowTableHeaderBefore').'</label>';
+								echo '</div>';
+							}
+							// InfraS add end
                             $form = new Form($db);
                             echo '<div>';
                             echo '<label for="subtotal_tva_tx">'.$form->textwithpicto($langs->trans('subtotal_apply_default_tva'), $langs->trans('subtotal_apply_default_tva_help')).'</label>';

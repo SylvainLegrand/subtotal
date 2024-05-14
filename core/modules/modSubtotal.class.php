@@ -520,7 +520,11 @@ class modSubtotal extends DolibarrModules
 		$extra->addExtraField('hideblock', 'Cacher les lignes contenues dans ce titre', 'int', 4, 2, 'commande_fournisseurdet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
 		$extra->addExtraField('hideblock', 'Cacher les lignes contenues dans ce titre', 'int', 4, 2, 'facturedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
 		$extra->addExtraField('hideblock', 'Cacher les lignes contenues dans ce titre', 'int', 4, 2, 'facture_fourn_det', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
-
+		// InfraS add begin
+		$extra->addExtraField('show_table_header_before', 'Afficher l\'en-tête du tableau juste avant ce titre', 'int', 4, 2, 'propaldet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		$extra->addExtraField('show_table_header_before', 'Afficher l\'en-tête du tableau juste avant ce titre', 'int', 4, 2, 'commandedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		$extra->addExtraField('show_table_header_before', 'Afficher l\'en-tête du tableau juste avant ce titre', 'int', 4, 2, 'facturedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		// InfraS add end
 		return $this->_init($sql, $options);
     }
 

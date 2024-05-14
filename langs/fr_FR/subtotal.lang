@@ -23,6 +23,7 @@ YourTextLabel = Saisissez votre description
 deleteWithAllLines = Supprimer avec toutes les lignes contenues
 ConfirmDeleteAllThisLines = Confirmez-vous la suppression de %s lignes ?
 AddBreakPageBefore = Ajouter un saut de page avant.
+ShowTableHeaderBefore = N'afficher l'en-tête du tableau QUE juste avant ce titre
 SubtotalLineShowQty = Afficher la quantité du sous-total
 Level = Niveau
 SubtotalLabel = <b>Sous-total : </b>
