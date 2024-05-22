@@ -524,6 +524,14 @@ class modSubtotal extends DolibarrModules
 		$extra->addExtraField('show_table_header_before', 'Afficher l\'en-tête du tableau juste avant ce titre', 'int', 4, 2, 'propaldet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
 		$extra->addExtraField('show_table_header_before', 'Afficher l\'en-tête du tableau juste avant ce titre', 'int', 4, 2, 'commandedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
 		$extra->addExtraField('show_table_header_before', 'Afficher l\'en-tête du tableau juste avant ce titre', 'int', 4, 2, 'facturedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+
+		$extra->addExtraField('print_as_list', 'Imprimer le contenu sous forme de liste', 'int', 4, 2, 'propaldet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		$extra->addExtraField('print_as_list', 'Imprimer le contenu sous forme de liste', 'int', 4, 2, 'commandedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		$extra->addExtraField('print_as_list', 'Imprimer le contenu sous forme de liste', 'int', 4, 2, 'facturedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+
+		$extra->addExtraField('print_condensed', 'Imprimer le contenu de manière condensé', 'int', 4, 2, 'propaldet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		$extra->addExtraField('print_condensed', 'Imprimer le contenu de manière condensé', 'int', 4, 2, 'commandedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
+		$extra->addExtraField('print_condensed', 'Imprimer le contenu de manière condensé', 'int', 4, 2, 'facturedet', 0, 0, '', unserialize('a:1:{s:7:"options";a:1:{s:0:"";N;}}'), 0, '', 0, 1);
 		// InfraS add end
 		return $this->_init($sql, $options);
     }

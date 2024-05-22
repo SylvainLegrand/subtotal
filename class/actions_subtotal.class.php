@@ -3005,7 +3005,15 @@ class ActionsSubtotal extends \subtotal\RetroCompatCommonHookActions
 							if (!empty(isModEnabled('infraspackplus')) && in_array($object->element, array('propal', 'commande', 'facture'))) {
 								echo '<div>';
 								echo '<input style="vertical-align:sub;"  type="checkbox" name="line-showTableHeaderBefore" id="subtotal-showTableHeaderBefore" value="10" '.((!empty($line->array_options['options_show_table_header_before']) && $line->array_options['options_show_table_header_before'] > 0) ? 'checked="checked"' : '') .' />&nbsp;';
-								echo '<label for="subtotal-showTotalHT">'.$langs->trans('ShowTableHeaderBefore').'</label>';
+								echo '<label for="subtotal-showTableHeaderBefore">'.$langs->trans('ShowTableHeaderBefore').'</label>';
+								echo '</div>';
+								echo '<div>';
+								echo '<input style="vertical-align:sub;"  type="checkbox" name="line-printAsList" id="subtotal-printAsList" value="20" '.((!empty($line->array_options['options_print_as_list']) && $line->array_options['options_print_as_list'] > 0) ? 'checked="checked"' : '') .' />&nbsp;';
+								echo '<label for="subtotal-printAsList">'.$langs->trans('PrintAsList').'</label>';
+								echo '</div>';
+								echo '<div>';
+								echo '<input style="vertical-align:sub;"  type="checkbox" name="line-printCondensed" id="subtotal-printCondensed" value="30" '.((!empty($line->array_options['options_print_condensed']) && $line->array_options['options_print_condensed'] > 0) ? 'checked="checked"' : '') .' />&nbsp;';
+								echo '<label for="subtotal-printCondensed">'.$langs->trans('PrintCondensed').'</label>';
 								echo '</div>';
 							}
 							// InfraS add end
