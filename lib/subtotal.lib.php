@@ -134,6 +134,8 @@ function _updateSubtotalLine(&$object, &$line)
 	$description = ($line->qty>90) ? '' : GETPOST('line-description', 'restricthtml');
 	$pagebreak = GETPOST('line-pagebreak', 'int');
 	$showTableHeaderBefore = GETPOST('line-showTableHeaderBefore', 'int');	// InfraS add
+	$printAsList = GETPOST('line-printAsList', 'int');	// InfraS add
+	$printCondensed = GETPOST('line-printCondensed', 'int');	// InfraS add
     $showTotalHT = GETPOST('line-showTotalHT', 'int');
     $showReduc = GETPOST('line-showReduc', 'int');
     $showQty = GETPOSTISSET('line-showQty') ? GETPOST('line-showQty', 'int') : -1;
@@ -145,6 +147,8 @@ function _updateSubtotalLine(&$object, &$line)
 		else $line->qty = $level;
 	}
     $line->array_options['options_show_table_header_before'] = $showTableHeaderBefore;	// InfraS add
+    $line->array_options['options_print_as_list'] = $printAsList;	// InfraS add
+    $line->array_options['options_print_condensed'] = $printCondensed;	// InfraS add
     $line->array_options['options_show_total_ht'] = $showTotalHT;
     $line->array_options['options_show_reduc'] = $showReduc;
     $line->array_options['options_subtotal_show_qty'] = $showQty;
